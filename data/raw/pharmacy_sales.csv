@@ -1,0 +1,9 @@
+sale_id,date,pharmacy_id,drug_name,drug_class,dose_mg,quantity_sold,patient_age,patient_gender
+1,2025-11-01,PH001,Amoxicillin,Penicillins,500,30,34,M
+2,2025-11-01,PH001,Ciprofloxacin,Fluoroquinolones,500,10,45,F
+3,2025-11-02,PH002,Azithromycin,Macrolides,250,15,29,F
+4,2025-11-02,PH001,Amoxicillin,Penicillins,500,20,60,M
+5,2025-11-03,PH003,Metronidazole,Nitroimidazoles,400,25,22,M
+6,2025-11-03,PH002,Cotrimoxazole,Sulfonamides,960,5,50,F
+7,2025-11-04,PH001,Amoxicillin,Penicillins,500,10,16,F
+8,2025-11-05,PH003,Ciprofloxacin,Fluoroquinolones,500,8,70,M
