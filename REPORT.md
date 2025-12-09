@@ -5,7 +5,7 @@ The application use a modular, containerized architecture using Django, Airflow,
 
   Several optimizations are incorporated across the stack:
   Database: indexing, partitioning strategies, and connection pooling for faster queries and high-volume ingestion.
-  Airflow: task parallelization, optimized retries, minimal XCom usage, and efficient scheduler configurations.
+  Airflow: task parallelization, optimized retries and efficient scheduler configurations.
   Django: query optimization, use of select_related/prefetch_related, caching, and bulk inserts/updates.
   Containers: persistent volumes for durability, resource limits for stability, and lightweight base images for faster builds.
 
