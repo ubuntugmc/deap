@@ -1,5 +1,4 @@
-# Data Engineer Assessment Practical (DEAP) # AMR Data Pipeline — repo Is single-file repository that demonstrates a small, basic data pipeline linking a Public/Private pharmacy and a public health institute Anti Microbial System. This setup is runnable locally with Docker Compose and performs ingestion → transformation → load → modeling steps.
-
+# Data Engineer Assessment Practical (DEAP) # AMR Data Pipeline — repo Is single-file repository that demonstrates a small, basic data pipeline linking a Public/Private pharmacy and a public health institute Anti Microbial System.This environment runs locally through Docker Compose and executes the complete workflow: data ingestion, transformation, loading, and modeling steps.
 DEAP Django + Airflow demo for CHAI Inteview Assesment Only
 -----------------------------------------------------------
 Structure:
@@ -7,23 +6,21 @@ Structure:
 - pipeline/        -> Django app with pipeline services
 - data/            -> raw and processed data used by pipeline
 - orchestration/airflow/ -> Airflow docker-compose and dags
-
 # Quickstart Overview (local development)
-1. Ensure that Python 3.10+, Docker & Docker Compose are installed.
-2. Create a virtualenv and install Django for running Django locally:
+    1. Ensure that Python 3.10+, Docker & Docker Compose are installed.
+    2. Create a virtualenv and install Django for running Django locally:
     python -m venv venv
     source venv/bin/activate
     pip install -r requirements.txt
-3. Start Airflow:
+    3. Start Airflow:
     cd orchestration/airflow
     docker compose up -d
-   Wait until http://localhost:8080 is available (default user/password airflow/airflow)
-4. Run Django:
+    Wait until http://localhost:8080 is available (default user/password airflow/airflow)
+    4. Run Django:
     python manage.py migrate
     python manage.py runserver
-5. Trigger via Django endpoint:
+    5. Trigger via Django endpoint:
     http://localhost:8000/pipeline/run/
-
 Assesor Notes:
 - The Airflow DAG expects the deap project folder to exist under the Airflow dags directory.
 - For this ZIP, the folder `orchestration/airflow/dags/deap` contains a copy of the Django app so Airflow can import it.
@@ -39,7 +36,7 @@ Ensure you have the following installed:
     PostgreSQL Client (optional: pgAdmin or DBeaver for database management)
 # STEP 1: SET UP PYTHON VIRTUAL ENVIRONMENT
 Navigate to your project directory:
-    cd path to you project folder *(i.e C:\Users\Gregory Malunga\Documents\MEneg\CHAI\deap)*
+    cd path to assessors project folder *(i.e something like C:\Users\Gregory Malunga\Documents\MEneg\CHAI\deap)*
 Create virtual environment:
     python -m venv venv
 Activate virtual environment:
@@ -63,15 +60,15 @@ What this will do:
 Verify services are running:
     docker ps
 Output:
->  1. airflow-webserver
- > 2. airflow-scheduler
- > 3. airflow-init
- > 4. postgres
+    > 1. airflow-webserver
+    > 2. airflow-scheduler
+    > 3. airflow-init
+    > 4. postgres
 Access Airflow UI:
 Open browser → http://localhost:8080
 Login: admin / admin
 # STEP 4: SET UP POSTGRESQL DATABASE
-Open your PostgreSQL client (psql, pgAdmin, or DBeaver) and run:
+Open your PostgreSQL client (psql command, pgAdmin) and run:
     CREATE DATABASE amrdb;
     CREATE USER amruser WITH PASSWORD 'amr123';
     GRANT ALL PRIVILEGES ON DATABASE amrdb TO amruser;
@@ -79,7 +76,7 @@ Open your PostgreSQL client (psql, pgAdmin, or DBeaver) and run:
     GRANT ALL ON SCHEMA public TO amruser;
 # STEP 5: APPLY DJANGO MIGRATIONS
 Important: navigate back to project root:
-    cd C:\Users\Gregory Malunga\Documents\MEneg\CHAI\deap
+     cd path to the assesors project folder *(i.e something like C:\Users\Gregory Malunga\Documents\MEneg\CHAI\deap)*
 # Run migrations:
     python manage.py migrate
  This creates all necessary database tables for the Django application.
