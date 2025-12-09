@@ -94,7 +94,7 @@ OPTION A: Via Airflow UI (Recommended)
 4. Click the Trigger DAG button
 OPTION B: Via Django Endpoint
     curl -X POST http://localhost:8000/pipeline/run/
-Or use Postman/Insomnia to send POST request
+Or use Postman to send POST request
 # STEP 8: VERIFY PIPELINE EXECUTION
 Check Airflow DAG Status:
 • Go to Airflow UI → DAGs → deap_pipeline
