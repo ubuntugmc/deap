@@ -91,7 +91,7 @@ OPTION A: Via Airflow UI (Recommended)
 1. Go to http://localhost:8080
 2. Login with admin / admin
 3. Find the DAG: deap_pipeline
-4. Click the ▶ Trigger DAG button
+4. Click the Trigger DAG button
 OPTION B: Via Django Endpoint
     curl -X POST http://localhost:8000/pipeline/run/
 Or use Postman/Insomnia to send POST request
