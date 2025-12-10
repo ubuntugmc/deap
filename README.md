@@ -15,6 +15,8 @@ Structure:
     3. Start Airflow:
     cd orchestration/airflow
     docker compose up -d
+    If docker is not installed run docker install commands
+    pip install docker
     Wait until http://localhost:8080 is available (default user/password airflow/airflow)
     4. Run Django:
     python manage.py migrate
