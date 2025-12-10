@@ -1,8 +1,8 @@
 # Data Engineer Assessment Practical (DEAP) # AMR Data Pipeline — repo Is single-file repository that demonstrates a small, basic data pipeline linking a Public/Private pharmacy and a public health institute Anti Microbial System.This environment runs locally through Docker Compose and executes the complete workflow: data ingestion, transformation, loading, and modeling steps.
-DEAP Django + Airflow demo for CHAI Inteview Assesment Only
+DEAP Django + Airflow demo for CHAI Inteview Assesment Only.
 -----------------------------------------------------------
 Structure:
-- deap/            -> Django project
+- deap/            -> Django Framework based project
 - pipeline/        -> Django app with pipeline services
 - data/            -> raw and processed data used by pipeline
 - orchestration/airflow/ -> Airflow docker-compose and dags
@@ -126,3 +126,5 @@ Virtual Environment Not Activating:
 
     Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser
     .\venv\Scripts\Activate.ps1
+
+# Note: AI tools, including ChatGPT and Grok, were used in this project to help adapt and align my previously used project templates to the requirements of this assignment.
