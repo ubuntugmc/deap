@@ -10,7 +10,8 @@ Structure:
     1. Ensure that Python 3.10+, Django, Docker & Docker Compose are installed.
     2. Create a virtualenv and install Django for running Django locally:
     python -m venv venv
-    source venv/bin/activate
+    source venv/bin/activate (Linux) / .\venv\Scripts\activate (windows power shell)
+     - confirm whether the venv exists, run command: Get-ChildItem .\venv\
     pip install -r requirements.txt
     3. Start Airflow:
     cd orchestration/airflow
