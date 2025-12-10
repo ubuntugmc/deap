@@ -7,7 +7,7 @@ Structure:
 - data/            -> raw and processed data used by pipeline
 - orchestration/airflow/ -> Airflow docker-compose and dags
 # Quickstart Overview (local development)
-    1. Ensure that Python 3.10+, Docker & Docker Compose are installed.
+    1. Ensure that Python 3.10+, Django, Docker & Docker Compose are installed.
     2. Create a virtualenv and install Django for running Django locally:
     python -m venv venv
     source venv/bin/activate
