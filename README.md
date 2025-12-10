@@ -19,7 +19,9 @@ Structure:
     3. Start Airflow:
     cd orchestration/airflow
     docker-compose up -d
-    Note: If docker is not installed run docker install command
+    docker compose down
+    docker compose run airflow-webserver airflow db init
+  Note: If docker is not installed run docker install command
   Ensure to add a admin user in order to login>
     docker exec -it airflow-airflow-webserver-1 airflow users create `
     --username airflow `
@@ -42,7 +44,8 @@ Note: Ensure that the airflow database is intialised by running the command : do
     python manage.py runserver
     5. Trigger via Django endpoint:
     http://localhost:8000/pipeline/run/
-Assesor Notes:
+    
+Developer Notes:
 - The Airflow DAG expects the deap project folder to exist under the Airflow dags directory.
 - For this ZIP, the folder `orchestration/airflow/dags/deap` contains a copy of the Django app so Airflow can import it.
 
