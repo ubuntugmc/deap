@@ -4,7 +4,7 @@ Start:
     cd orchestration/airflow
     docker-compose up -d
 
-Ensure to add a admin user inorder to login>
+Ensure to add a admin user in order to login>
 
     docker exec -it airflow-airflow-webserver airflow users create `
     --username airflow `
