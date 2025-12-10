@@ -112,7 +112,7 @@ Available endpoints:
 # STEP 7: RUN THE DATA PIPELINE
 OPTION A: Via Airflow UI (Recommended)
 1. Go to http://localhost:8080
-2. Login with admin / admin
+2. Login with airflow / airflow
 3. Find the DAG: deap_pipeline
 4. Click the Trigger DAG button
 OPTION B: Via Django Endpoint
