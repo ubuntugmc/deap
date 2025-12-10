@@ -6,6 +6,7 @@ Structure:
 - pipeline/        -> Django app with pipeline services
 - data/            -> raw and processed data used by pipeline
 - orchestration/airflow/ -> Airflow docker-compose and dags
+  
 # Quickstart Overview (local development)
     1. Ensure that Python 3.10+, Django, Docker & Docker Compose are installed.
     2. Create a virtualenv and install Django for running Django locally:
@@ -32,7 +33,7 @@ Visit Airflow UI: http://localhost:8080 (login airflow/airflow)
 
 Note: Ensure that the airflow database is intialised by running the command : docker exec -it airflow-airflow-webserver-1 airflow db init
 
-#The 'dags' folder contains a copy of the deap project (dags/deap).
+# The 'dags' folder contains a copy of the deap project (dags/deap).
     
     pip install docker
     Wait until http://localhost:8080 is available (default user/password airflow/airflow)
