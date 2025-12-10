@@ -12,7 +12,7 @@ Ensure to add a admin user in order to login>
     --firstname Admin `
     --lastname User `
     --role Admin `
-    --email admin@example.com
+    --email chisangagm@yahoo.com
 
 
 Visit Airflow UI: http://localhost:8080 (login airflow/airflow)
