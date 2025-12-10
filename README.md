@@ -1,4 +1,4 @@
-# Data Engineer Assessment Practical (DEAP) # AMR Data Pipeline — repo Is single-file repository that demonstrates a small, basic data pipeline linking a Public/Private pharmacy and a public health institute Anti Microbial System.This environment runs locally through Docker Compose and executes the complete workflow: data ingestion, transformation, loading, and modeling steps.
+# Data Engineer Assessment Practical (DEAP) # AMR Data Pipeline — repo Is single-file repository that demonstrates a small, basic data pipeline linking a public/private pharmacy and a public health institute Anti Microbial System.This environment runs locally through Docker Compose and executes the complete workflow: data ingestion, transformation, loading, and modeling steps.
 DEAP Django + Airflow demo for CHAI Inteview Assesment Only.
 -----------------------------------------------------------
 Structure:
