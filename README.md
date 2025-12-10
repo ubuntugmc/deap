@@ -34,10 +34,6 @@ Structure:
 
 Visit Airflow UI: http://localhost:8080 (login airflow/airflow)
 
-# The 'dags' folder contains a copy of the deap project (dags/deap).
-    
-    pip install docker
-    Wait until http://localhost:8080 is available (default user/password airflow/airflow)
     4. Run Django:
     python manage.py migrate
     python manage.py runserver
