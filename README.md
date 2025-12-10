@@ -85,7 +85,7 @@ Output:
     > 4. postgres
 Access Airflow UI:
 Open browser → http://localhost:8080
-Login: admin / admin
+Login: airflow / airflow
 # STEP 4: SET UP POSTGRESQL DATABASE
 Open your PostgreSQL client (psql command, pgAdmin) and run:
     CREATE DATABASE amrdb;
