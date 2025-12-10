@@ -19,6 +19,21 @@ Structure:
     cd orchestration/airflow
     docker-compose up -d
     Note: If docker is not installed run docker install command
+  Ensure to add a admin user in order to login>
+    docker exec -it airflow-airflow-webserver-1 airflow users create `
+    --username airflow `
+    --password airflow `
+    --firstname Admin `
+    --lastname User `
+    --role Admin `
+    --email chisangagm@yahoo.com
+
+Visit Airflow UI: http://localhost:8080 (login airflow/airflow)
+
+Note: Ensure that the airflow database is intialised by running the command : docker exec -it airflow-airflow-webserver-1 airflow db init
+
+#The 'dags' folder contains a copy of the deap project (dags/deap).
+    
     pip install docker
     Wait until http://localhost:8080 is available (default user/password airflow/airflow)
     4. Run Django:
