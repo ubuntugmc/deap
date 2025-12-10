@@ -98,6 +98,10 @@ Important: navigate back to project root:
      cd path to the assesors project folder *(i.e something like C:\Users\Gregory Malunga\Documents\MEneg\CHAI\deap)*
 # Run migrations:
     python manage.py migrate
+    python manage.py createsuperuser
+    username: admin
+    passowrd:airflow
+    email:chisangagm@yahoo.com
  This creates all necessary database tables for the Django application.
 # STEP 6: START DJANGO DEVELOPMENT SERVER
     python manage.py runserver
