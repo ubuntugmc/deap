@@ -21,7 +21,7 @@ Structure:
     docker-compose up -d
     docker compose down
     docker compose run airflow-webserver airflow db init
-  Note: If docker is not installed run docker install command
+    Note: If docker is not installed run docker install command
     Ensure to add a admin user in order to login>
     docker exec -it airflow-airflow-webserver-1 airflow users create `
     --username airflow `
