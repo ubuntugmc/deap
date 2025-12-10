@@ -17,7 +17,7 @@ Structure:
     pip install -r requirements.txt
     3. Start Airflow:
     cd orchestration/airflow
-    docker compose up -d or docker-compose up -d
+    docker-compose up -d
     Note: If docker is not installed run docker install command
     pip install docker
     Wait until http://localhost:8080 is available (default user/password airflow/airflow)
