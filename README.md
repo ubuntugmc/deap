@@ -16,9 +16,8 @@ The pipeline simulates an end-to-end AMR data workflow — from ingestion at the
 - PostgreSQL13+
 - Airflow (for orchestrating tasks)
 
-# DEAP Django + Airflow demo for CHAI Inteview Assesment Only.
 -----------------------------------------------------------
-Structure:
+# Structure:
 - deap/            -> Django Framework based project
 - pipeline/        -> Django app with pipeline services
 - data/            -> raw and processed data used by pipeline
@@ -168,3 +167,4 @@ Virtual Environment Not Activating:
     .\venv\Scripts\Activate.ps1
 # Attribution
 Note: AI tools, including ChatGPT and Grok, were used in this project to help adapt and align my previously used project templates to the requirements of this assignment.
+# Licence
