@@ -40,7 +40,7 @@ The pipeline simulates an end-to-end AMR data workflow — from ingestion at the
      pip install psycopg2-binary
      pip install -r requirements.txt
      
-    3. Start Airflow:
+    3. Start Airflow with docker:
     cd orchestration/airflow
     docker-compose up -d
     docker compose down
