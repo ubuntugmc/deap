@@ -139,4 +139,6 @@ STEP 9: VERIFY PIPELINE EXECUTION
 
 # Attribution
 Note: AI tools, including ChatGPT and Grok, were used in this project to help adapt and align my previously used project templates to the requirements of this assignment.
-# Licence
+# License
+This project is licensed under the MIT License.
+You are free to use, modify, and distribute this software with minimal restrictions.
