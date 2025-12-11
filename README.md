@@ -29,7 +29,8 @@ The pipeline simulates an end-to-end AMR data workflow — from ingestion at the
     source venv/bin/activate (Linux) and or
     Run this command: Set-ExecutionPolicy -Scope CurrentUser -ExecutionPolicy RemoteSigned
     then .\venv\Scripts\activate (windows command / power shell)
-     - confirm whether the venv exists, run command: Get-ChildItem .\venv\
+     - confirm whether the venv exists:
+     - run command: Get-ChildItem .\venv\
     pip install -r requirements.txt
     3. Start Airflow:
     cd orchestration/airflow
