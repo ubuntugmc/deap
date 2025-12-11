@@ -13,7 +13,7 @@ The pipeline simulates an end-to-end AMR data workflow — from ingestion at the
 - Django Framework
 - Python
 - Docker & Docker Compose
-- PostgreSQL
+- PostgreSQL13+
 - Airflow (for orchestrating tasks)
 
 # DEAP Django + Airflow demo for CHAI Inteview Assesment Only.
