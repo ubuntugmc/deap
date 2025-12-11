@@ -29,7 +29,7 @@ Note: git clone: https://github.com/ubuntugmc/deap.git
 
 STEP 1. Ensure that Python 3.10+, Django, Docker & Docker Compose are installed.
 
-STEP 2. Create a virtualenv and install Django for running Django locally:
+STEP 2. install Django for running Django locally (Create a virtualenv for delopment isolation)
     python -m venv venv
     source venv/bin/activate (Linux) and or
     Run this command:
