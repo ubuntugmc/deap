@@ -12,7 +12,7 @@ The pipeline simulates an end-to-end AMR data workflow — from ingestion at the
 - Django Framework
 - Python
 - Docker & Docker Compose
-- PostgreSQL13+
+- PostgreSQL13+ (Install pgAdmin or DBeaver for database management on local computer)
 - Airflow (for orchestrating tasks)
 - Git/VSCODE (Important for cloning repository)
 -----------------------------------------------------------
