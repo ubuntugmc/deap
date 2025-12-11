@@ -27,10 +27,14 @@ The pipeline simulates an end-to-end AMR data workflow — from ingestion at the
     2. Create a virtualenv and install Django for running Django locally:
     python -m venv venv
     source venv/bin/activate (Linux) and or
-    Run this command: Set-ExecutionPolicy -Scope CurrentUser -ExecutionPolicy RemoteSigned
-    then .\venv\Scripts\activate (windows command / power shell)
-     - confirm whether the venv exists:
-     - run command: Get-ChildItem .\venv\
+    Run this command:
+    Set-ExecutionPolicy -Scope CurrentUser -ExecutionPolicy RemoteSigned
+    then 
+    .\venv\Scripts\activate (windows command / power shell)
+    
+    confirm whether the venv exists:
+     run command:
+     Get-ChildItem .\venv\
      Ensure to install Requirement run command
      pip install -r requirements.txt
      
