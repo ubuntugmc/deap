@@ -30,13 +30,13 @@ Note: git clone: https://github.com/ubuntugmc/deap.git
 STEP 1. Ensure that Python 3.10+, Django, Docker & Docker Compose are installed.
 
 STEP 2. install Django for running Django locally (Create a virtualenv for delopment isolation)
-    python -m venv venv
-    source venv/bin/activate (Linux) 
+    - python -m venv venv
+    - source venv/bin/activate (Linux) 
     and or
     Run this command:
-    Set-ExecutionPolicy -Scope CurrentUser -ExecutionPolicy RemoteSigned
+    - Set-ExecutionPolicy -Scope CurrentUser -ExecutionPolicy RemoteSigned
     then 
-    .\venv\Scripts\activate (windows command / power shell)
+    - .\venv\Scripts\activate (windows command / power shell)
     
     confirm whether the venv exists:
      run command:
