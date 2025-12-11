@@ -40,48 +40,12 @@ The pipeline simulates an end-to-end AMR data workflow — from ingestion at the
      pip install psycopg2-binary
      pip install -r requirements.txt
      
-    3. Start Airflow with docker:
+3. Start Airflow with docker:
     cd orchestration/airflow
     docker-compose up -d
     docker compose down
     docker compose run airflow-webserver airflow db init
     Note: If docker is not installed run docker install command
-    
-    Ensure to add a admin user in order to login>
-    docker exec -it airflow-airflow-webserver-1 airflow users create `
-    --username airflow `
-    --password airflow `
-    --firstname Admin `
-    --lastname User `
-    --role Admin `
-    --email chisangagm@yahoo.com
-
-Visit Airflow UI: http://localhost:8080 (login airflow/airflow)
-
-    4. Run Django Framework with these command:
-    
-    python manage.py migrate
-    python manage.py createsuperuser
-    - username: admin
-    - passowrd:airflow
-    - email:chisangagm@yahoo.com
-    This creates all necessary database tables for the Django application the proceed and run the command:
-    python manage.py runserver
-    
-    5. Trigger via Django endpoint:
-    http://localhost:8000/pipeline/run/
-    
-Developer Notes:
-- The Airflow DAG expects the deap project folder to exist under the Airflow dags directory.
-- For this ZIP, the folder `orchestration/airflow/dags/deap` contains a copy of the Django app so Airflow can import it.
-
-# AMR DATA PIPELINE SETUP MANUAL
-Complete Setup Guide for Windows + PowerShell
-
-# STEP 3: START AIRFLOW WITH DOCKER
-Navigate to Airflow directory:
-    cd orchestration/airflow
-Start all services:
     docker compose up -d
 What this will do:
 • Creates Airflow PostgreSQL database
@@ -98,6 +62,34 @@ Output:
 Access Airflow UI:
 Open browser → http://localhost:8080
 Login: airflow / airflow
+    
+    Ensure to add a admin user in order to login>
+    docker exec -it airflow-airflow-webserver-1 airflow users create `
+    --username airflow `
+    --password airflow `
+    --firstname Admin `
+    --lastname User `
+    --role Admin `
+    --email chisangagm@yahoo.com
+
+Visit Airflow UI: http://localhost:8080 (login airflow/airflow)
+
+4. Run Django Framework with these command:
+      python manage.py migrate
+      python manage.py createsuperuser
+      - username: admin
+      - passowrd:airflow
+      - email:chisangagm@yahoo.com
+    This creates all necessary database tables for the Django application the proceed and run the command:
+       python manage.py runserver
+    
+    5. Trigger via Django endpoint:
+    http://localhost:8000/pipeline/run/
+    
+Developer Notes:
+- The Airflow DAG expects the deap project folder to exist under the Airflow dags directory.
+- For this ZIP, the folder `orchestration/airflow/dags/deap` contains a copy of the Django app so Airflow can import it.
+
 # STEP 4: SET UP POSTGRESQL DATABASE
 Open your PostgreSQL client (psql command, pgAdmin) and run:
     CREATE DATABASE amrdb;
