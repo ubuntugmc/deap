@@ -14,7 +14,7 @@ The pipeline simulates an end-to-end AMR data workflow — from ingestion at the
 - Docker & Docker Compose
 - PostgreSQL13+
 - Airflow (for orchestrating tasks)
-- Git/VSCODE (Important for cloning repositories)
+- Git/VSCODE (Important for cloning repository)
 -----------------------------------------------------------
 # Structure:
 - deap/            -> Django Framework based project
