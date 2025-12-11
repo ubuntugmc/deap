@@ -36,6 +36,7 @@ The pipeline simulates an end-to-end AMR data workflow — from ingestion at the
      run command:
      Get-ChildItem .\venv\
      Ensure to install Requirement run command
+     pip install psycopg2-binary
      pip install -r requirements.txt
      
     3. Start Airflow:
