@@ -31,7 +31,8 @@ STEP 1. Ensure that Python 3.10+, Django, Docker & Docker Compose are installed.
 
 STEP 2. install Django for running Django locally (Create a virtualenv for delopment isolation)
     python -m venv venv
-    source venv/bin/activate (Linux) and or
+    source venv/bin/activate (Linux) 
+    and or
     Run this command:
     Set-ExecutionPolicy -Scope CurrentUser -ExecutionPolicy RemoteSigned
     then 
