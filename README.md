@@ -82,36 +82,25 @@ Visit Airflow UI: http://localhost:8080 (login airflow/airflow)
       - email:chisangagm@yahoo.com
     This creates all necessary database tables for the Django application the proceed and run the command:
        python manage.py runserver
-    
-    5. Trigger via Django endpoint:
-    http://localhost:8000/pipeline/run/
-    
-Developer Notes:
-- The Airflow DAG expects the deap project folder to exist under the Airflow dags directory.
-- For this ZIP, the folder `orchestration/airflow/dags/deap` contains a copy of the Django app so Airflow can import it.
+       Django server runs at: http://localhost:8000
+Note: This creates all necessary database tables for the Django application.
 
-# STEP 4: SET UP POSTGRESQL DATABASE
+5: SET UP POSTGRESQL DATABASE
 Open your PostgreSQL client (psql command, pgAdmin) and run:
     CREATE DATABASE amrdb;
     CREATE USER amruser WITH PASSWORD 'amr123';
     GRANT ALL PRIVILEGES ON DATABASE amrdb TO amruser;
     \c amrdb
     GRANT ALL ON SCHEMA public TO amruser;
-# STEP 5: APPLY DJANGO MIGRATIONS
-Important: navigate back to project root:
-     cd path to the assesors project folder *(i.e something like C:\Users\Gregory Malunga\Documents\MEneg\CHAI\deap)*
-# Run migrations:
-    python manage.py migrate
-    python manage.py createsuperuser
-    username: admin
-    passowrd:airflow
-    email:chisangagm@yahoo.com
- This creates all necessary database tables for the Django application.
-# STEP 6: START DJANGO DEVELOPMENT SERVER
-    python manage.py runserver
-    Django server runs at: http://localhost:8000
+
+7. Trigger via Django endpoint:
+    http://localhost:8000/pipeline/run/
+ 
 Available endpoints:
 • POST http://localhost:8000/pipeline/run/ - Trigger pipeline via HTTP
+Developer Notes:
+- The Airflow DAG expects the deap project folder to exist under the Airflow dags directory.
+- For this ZIP, the folder `orchestration/airflow/dags/deap` contains a copy of the Django app so Airflow can import it.
 
 # STEP 7: RUN THE DATA PIPELINE
 OPTION A: Via Airflow UI (Recommended)
