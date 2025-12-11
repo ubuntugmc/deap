@@ -149,5 +149,5 @@ Virtual Environment Not Activating:
 
     Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser
     .\venv\Scripts\Activate.ps1
-
-# Note: AI tools, including ChatGPT and Grok, were used in this project to help adapt and align my previously used project templates to the requirements of this assignment.
+# Attribution
+Note: AI tools, including ChatGPT and Grok, were used in this project to help adapt and align my previously used project templates to the requirements of this assignment.
