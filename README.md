@@ -52,9 +52,10 @@ The pipeline simulates an end-to-end AMR data workflow — from ingestion at the
 
 Visit Airflow UI: http://localhost:8080 (login airflow/airflow)
 
-    4. Run Django:
+    4. Run Django Framework:
     python manage.py migrate
     python manage.py runserver
+    
     5. Trigger via Django endpoint:
     http://localhost:8000/pipeline/run/
     
