@@ -58,7 +58,8 @@ The pipeline simulates an end-to-end AMR data workflow — from ingestion at the
 
 Visit Airflow UI: http://localhost:8080 (login airflow/airflow)
 
-    4. Run Django Framework:
+    4. Run Django Framework with these command:
+    
     python manage.py migrate
     python manage.py createsuperuser
     - username: admin
