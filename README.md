@@ -1,5 +1,21 @@
-# Data Engineer Assessment Practical (DEAP) # This is an Anti-Microbial Resistance (AMR) Data Pipeline is a single-file repository that demonstrates a simple data flow linking a public or private pharmacy to a public health institute’s Anti-Microbial System.This environment runs locally through Docker Compose and executes the complete workflow: data ingestion, transformation, loading, and modeling steps.
-DEAP Django + Airflow demo for CHAI Inteview Assesment Only.
+# Data Engineer Assessment Practical (DEAP)
+This repository contains a complete Anti-Microbial Resistance (AMR) Data Pipeline designed to showcase a simple but functional data flow between a pharmacy (public or private) and a public health institute’s AMR system. The project is packaged as a lightweight, single-file solution and is fully runnable using Docker Compose.
+# Overview
+The pipeline simulates an end-to-end AMR data workflow — from ingestion at the pharmacy level to transformation, loading, and modeling at the public health institute. It is intended as a demonstration of core data engineering concepts within an AMR surveillance context.
+# Features
+- Automated ingestion of AMR-related data from a simulated pharmacy source
+- Transformation and cleaning of raw clinical and pharmaceutical data
+- Loading of processed data into a structured storage layer
+- Fully containerized setup using Docker Compose
+- Local execution with minimal dependencies
+
+# Tech Stack
+- Python
+- Docker & Docker Compose
+- PostgreSQL
+- Airflow (optional, if orchestrating tasks)
+
+# DEAP Django + Airflow demo for CHAI Inteview Assesment Only.
 -----------------------------------------------------------
 Structure:
 - deap/            -> Django Framework based project
