@@ -78,25 +78,6 @@ Developer Notes:
 # AMR DATA PIPELINE SETUP MANUAL
 Complete Setup Guide for Windows + PowerShell
 
-# PREREQUISITES
-Ensure you have the following installed:
-    Python 3.11+ → https://www.python.org/downloads/
-    Docker Desktop → https://www.docker.com/products/docker-desktop/
-    Git/VSCODE (Important for cloning repositories)
-    PostgreSQL Client (optional: pgAdmin or DBeaver for database management)
-# STEP 1: SET UP PYTHON VIRTUAL ENVIRONMENT
-Navigate to your project directory:
-    cd path to assessors project folder *(i.e something like C:\Users\Gregory Malunga\Documents\MEneg\CHAI\deap)*
-Create virtual environment:
-    python -m venv venv
-Activate virtual environment:
-    .\venv\Scripts\Activate.ps1
-# TROUBLESHOOTING: If you get an execution policy error, run:
-    Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser
-# STEP 2: INSTALL PYTHON DEPENDENCIES
-Once your virtual environment is activated:
-    pip install -r requirements.txt
-    pip install psycopg2-binary
 # STEP 3: START AIRFLOW WITH DOCKER
 Navigate to Airflow directory:
     cd orchestration/airflow
