@@ -60,6 +60,11 @@ Visit Airflow UI: http://localhost:8080 (login airflow/airflow)
 
     4. Run Django Framework:
     python manage.py migrate
+    python manage.py createsuperuser
+    - username: admin
+    - passowrd:airflow
+    - email:chisangagm@yahoo.com
+    This creates all necessary database tables for the Django application the proceed and run the command:
     python manage.py runserver
     
     5. Trigger via Django endpoint:
