@@ -31,9 +31,9 @@ The pipeline simulates an end-to-end AMR data workflow — from ingestion at the
     then .\venv\Scripts\activate (windows command / power shell)
      - confirm whether the venv exists:
      - run command: Get-ChildItem .\venv\
-  # Install Requirement  
-    pip install -r requirements.txt
-    
+     Ensure to install Requirement run command
+     pip install -r requirements.txt
+     
     3. Start Airflow:
     cd orchestration/airflow
     docker-compose up -d
