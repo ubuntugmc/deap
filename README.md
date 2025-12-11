@@ -24,11 +24,11 @@ The pipeline simulates an end-to-end AMR data workflow — from ingestion at the
   
 # Quickstart Overview (clone repository local deployment)
 
-Note: git clone: https://github.com/ubuntugmc/deap.git
-      cd deap (project folder)
+Note: bash > git clone: https://github.com/ubuntugmc/deap.git
+             cd deap (project folder)
 
-Step 1. Ensure that Python 3.10+, Django, Docker & Docker Compose are installed.
-Step 2. Create a virtualenv and install Django for running Django locally:
+STEP 1. Ensure that Python 3.10+, Django, Docker & Docker Compose are installed.
+STEP 2. Create a virtualenv and install Django for running Django locally:
     python -m venv venv
     source venv/bin/activate (Linux) and or
     Run this command:
@@ -44,7 +44,7 @@ Step 2. Create a virtualenv and install Django for running Django locally:
      pip install psycopg2-binary
      pip install -r requirements.txt
      
-Step 3. Start Airflow with docker:
+STEP 3. Start Airflow with docker:
     cd orchestration/airflow
     docker-compose up -d
     docker compose down
@@ -78,7 +78,7 @@ Login: airflow / airflow
 
 Visit Airflow UI: http://localhost:8080 (login airflow/airflow)
 
-4. Run Django Framework with these command:
+STEP 4. Run Django Framework with these command:
       python manage.py migrate
       python manage.py createsuperuser
       - username: admin
@@ -89,7 +89,7 @@ Visit Airflow UI: http://localhost:8080 (login airflow/airflow)
        Django server runs at: http://localhost:8000
 Note: This creates all necessary database tables for the Django application.
 
-5: SET UP POSTGRESQL DATABASE
+STEP 5: SET UP POSTGRESQL DATABASE
 Open your PostgreSQL client (psql command, pgAdmin) and run:
     CREATE DATABASE amrdb;
     CREATE USER amruser WITH PASSWORD 'amr123';
@@ -97,7 +97,7 @@ Open your PostgreSQL client (psql command, pgAdmin) and run:
     \c amrdb
     GRANT ALL ON SCHEMA public TO amruser;
 
-7. Trigger via Django endpoint:
+STEP 6. Trigger via Django endpoint:
     http://localhost:8000/pipeline/run/
  
 Available endpoints:
@@ -106,29 +106,29 @@ Developer Notes:
 - The Airflow DAG expects the deap project folder to exist under the Airflow dags directory.
 - For this ZIP, the folder `orchestration/airflow/dags/deap` contains a copy of the Django app so Airflow can import it.
 
-# STEP 8: RUN THE DATA PIPELINE
+STEP 8: RUN THE DATA PIPELINE
 OPTION A: Via Airflow UI (Recommended)
 1. Go to http://localhost:8080
 2. Login with airflow / airflow
 3. Find the DAG: deap_pipeline
 4. Click the Trigger DAG button
-OPTION 9: Via Django Endpoint
+OPTION B: Via Django Endpoint
     curl -X POST http://localhost:8000/pipeline/run/
 Or use Postman to send POST request
-# STEP 10: VERIFY PIPELINE EXECUTION
-Check Airflow DAG Status:
-• Go to Airflow UI → DAGs → deap_pipeline
-• Monitor task execution in the Graph or Grid view
-Check Database Tables:
-Connect to PostgreSQL and run:
+STEP 10: VERIFY PIPELINE EXECUTION
+  Check Airflow DAG Status:
+  • Go to Airflow UI → DAGs → deap_pipeline
+  • Monitor task execution in the Graph or Grid view
+  Check Database Tables:
+  Connect to PostgreSQL and run:
     SELECT * FROM staging_pharmacy_sales LIMIT 20;
     SELECT * FROM analytics_mart_antibiotic_usage LIMIT 20;
     SELECT COUNT(*) FROM staging_pharmacy_sales;
     SELECT COUNT(*) FROM analytics_mart_antibiotic_usage;
-# Expected Results:
- 1. Cleaned data in staging_pharmacy_sales
- 2. Aggregated analytics in analytics_mart_antibiotic_usage
- 3. Properly partitioned tables (if configured)
+  Expected Results:
+   1. Cleaned data in staging_pharmacy_sales
+   2. Aggregated analytics in analytics_mart_antibiotic_usage
+   3. Properly partitioned tables (if configured)
 
 # Attribution
 Note: AI tools, including ChatGPT and Grok, were used in this project to help adapt and align my previously used project templates to the requirements of this assignment.
