@@ -15,7 +15,7 @@ The pipeline simulates an end-to-end AMR data workflow — from ingestion at the
 - Docker & Docker Compose
 - PostgreSQL13+
 - Airflow (for orchestrating tasks)
-
+- Git/VSCODE (Important for cloning repositories)
 -----------------------------------------------------------
 # Structure:
 - deap/            -> Django Framework based project
@@ -23,7 +23,7 @@ The pipeline simulates an end-to-end AMR data workflow — from ingestion at the
 - data/            -> raw and processed data used by pipeline
 - orchestration/airflow/ -> Airflow docker-compose and dags
   
-# Quickstart Overview (Clone repository local deployment)
+# Quickstart Overview (clone repository local deployment)
     1. Ensure that Python 3.10+, Django, Docker & Docker Compose are installed.
     2. Create a virtualenv and install Django for running Django locally:
     python -m venv venv
