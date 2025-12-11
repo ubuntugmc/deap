@@ -8,8 +8,7 @@ The pipeline simulates an end-to-end AMR data workflow — from ingestion at the
 - Loading of processed data into a structured storage layer
 - Fully containerized setup using Docker Compose
 - Local execution with minimal dependencies
-
-# Tech Stack
+# Tech Stack (PREREQUISITES)
 - Django Framework
 - Python
 - Docker & Docker Compose
