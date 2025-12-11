@@ -24,11 +24,11 @@ The pipeline simulates an end-to-end AMR data workflow — from ingestion at the
   
 # Quickstart Overview (clone repository local deployment)
 
-git clone: https://github.com/ubuntugmc/deap.git
-cd deap (project folder)
+Note: git clone: https://github.com/ubuntugmc/deap.git
+      cd deap (project folder)
 
-    1. Ensure that Python 3.10+, Django, Docker & Docker Compose are installed.
-    2. Create a virtualenv and install Django for running Django locally:
+Step 1. Ensure that Python 3.10+, Django, Docker & Docker Compose are installed.
+Step 2. Create a virtualenv and install Django for running Django locally:
     python -m venv venv
     source venv/bin/activate (Linux) and or
     Run this command:
@@ -44,7 +44,7 @@ cd deap (project folder)
      pip install psycopg2-binary
      pip install -r requirements.txt
      
-3. Start Airflow with docker:
+Step 3. Start Airflow with docker:
     cd orchestration/airflow
     docker-compose up -d
     docker compose down
