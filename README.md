@@ -35,7 +35,8 @@ The pipeline simulates an end-to-end AMR data workflow — from ingestion at the
     confirm whether the venv exists:
      run command:
      Get-ChildItem .\venv\
-     Ensure to install Requirement run command
+     Ensure to install Requirement run commands
+     
      pip install psycopg2-binary
      pip install -r requirements.txt
      
