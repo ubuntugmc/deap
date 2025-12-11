@@ -108,20 +108,22 @@ STEP 6. Trigger via Django endpoint:
   - For this ZIP, the folder `orchestration/airflow/dags/deap` contains a copy of the Django app so Airflow can import it.
 
 STEP 8: RUN THE DATA PIPELINE
-  OPTION A: Via Airflow UI (Recommended)
-  1. Go to http://localhost:8080
-  2. Login with airflow / airflow
-  3. Find the DAG: deap_pipeline
-  4. Click the Trigger DAG button
   
-  OPTION 9: Via Django Endpoint
-    curl -X POST http://localhost:8000/pipeline/run/
-    Or use Postman to send POST request
+  OPTION A: Via Airflow UI (Recommended)
+    1. Go to http://localhost:8080
+    2. Login with airflow / airflow
+    3. Find the DAG: deap_pipeline
+    4. Click the Trigger DAG button
+  
+  OPTION B: Via Django Endpoint
+    1. curl -X POST http://localhost:8000/pipeline/run/
+    2. Or use Postman to send POST request
 
 STEP 9: VERIFY PIPELINE EXECUTION
   Check Airflow DAG Status:
-  • Go to Airflow UI → DAGs → deap_pipeline
-  • Monitor task execution in the Graph or Grid view
+  1. Go to Airflow UI → DAGs → deap_pipeline
+  2. Monitor task execution in the Graph or Grid view
+  
   Check Database Tables:
   Connect to PostgreSQL and run:
     SELECT * FROM staging_pharmacy_sales LIMIT 20;
