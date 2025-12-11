@@ -52,10 +52,10 @@ STEP 3. Start Airflow with docker:
     Note: If docker is not installed run docker install command
     docker compose up -d
 What this will do:
-• Creates Airflow PostgreSQL database
-• Initializes Airflow metadata
-• Creates default admin user (admin / admin)
-• Starts Airflow webserver and scheduler
+  - Creates Airflow PostgreSQL database
+  - Initializes Airflow metadata
+  - Creates default admin user (admin / admin)
+  - Starts Airflow webserver and scheduler
 Verify services are running:
     docker ps
 Output:
@@ -101,7 +101,8 @@ STEP 6. Trigger via Django endpoint:
     http://localhost:8000/pipeline/run/
  
   Available endpoints:
-  • POST http://localhost:8000/pipeline/run/ - Trigger pipeline via HTTP
+  - POST http://localhost:8000/pipeline/run/ - Trigger pipeline via HTTP
+  
   Developer Notes:
   - The Airflow DAG expects the deap project folder to exist under the Airflow dags directory.
   - For this ZIP, the folder `orchestration/airflow/dags/deap` contains a copy of the Django app so Airflow can import it.
