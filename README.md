@@ -102,46 +102,30 @@ Developer Notes:
 - The Airflow DAG expects the deap project folder to exist under the Airflow dags directory.
 - For this ZIP, the folder `orchestration/airflow/dags/deap` contains a copy of the Django app so Airflow can import it.
 
-# STEP 7: RUN THE DATA PIPELINE
+# STEP 8: RUN THE DATA PIPELINE
 OPTION A: Via Airflow UI (Recommended)
 1. Go to http://localhost:8080
 2. Login with airflow / airflow
 3. Find the DAG: deap_pipeline
 4. Click the Trigger DAG button
-OPTION B: Via Django Endpoint
+OPTION 9: Via Django Endpoint
     curl -X POST http://localhost:8000/pipeline/run/
 Or use Postman to send POST request
-# STEP 8: VERIFY PIPELINE EXECUTION
+# STEP 10: VERIFY PIPELINE EXECUTION
 Check Airflow DAG Status:
 • Go to Airflow UI → DAGs → deap_pipeline
 • Monitor task execution in the Graph or Grid view
-
 Check Database Tables:
 Connect to PostgreSQL and run:
-
     SELECT * FROM staging_pharmacy_sales LIMIT 20;
     SELECT * FROM analytics_mart_antibiotic_usage LIMIT 20;
     SELECT COUNT(*) FROM staging_pharmacy_sales;
     SELECT COUNT(*) FROM analytics_mart_antibiotic_usage;
-
 # Expected Results:
  1. Cleaned data in staging_pharmacy_sales
  2. Aggregated analytics in analytics_mart_antibiotic_usage
  3. Properly partitioned tables (if configured)
-# COMMON TROUBLESHOOTING
-Docker Issues:
-    docker compose down
-    docker compose up -d
-    docker compose logs -f
-Database Connection Issues:
-• Verify PostgreSQL is running: docker ps
-• Check connection settings in Django settings.py
-• Ensure database user has proper permissions
 
-Virtual Environment Not Activating:
-
-    Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser
-    .\venv\Scripts\Activate.ps1
 # Attribution
 Note: AI tools, including ChatGPT and Grok, were used in this project to help adapt and align my previously used project templates to the requirements of this assignment.
 # Licence
