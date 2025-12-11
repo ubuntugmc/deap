@@ -10,10 +10,11 @@ The pipeline simulates an end-to-end AMR data workflow — from ingestion at the
 - Local execution with minimal dependencies
 
 # Tech Stack
+- Django Framework
 - Python
 - Docker & Docker Compose
 - PostgreSQL
-- Airflow (optional, if orchestrating tasks)
+- Airflow (for orchestrating tasks)
 
 # DEAP Django + Airflow demo for CHAI Inteview Assesment Only.
 -----------------------------------------------------------
